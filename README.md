@@ -6,10 +6,10 @@ After installing LSP Support and downloading the language server and Checker Fra
 
 ```
 java \
--cp /path/to/languageserver.jar:/path/to/checker-framework/checker/dist/checker.jar \
-org.checkerframework.languageserver.ServerMain \
---frameworkPath /path/to/checker-framework \
---checkers org.checkerframework.checker.nullness.NullnessChecker
+    -cp /path/to/languageserver.jar:/path/to/checker-framework/checker/dist/checker.jar \
+    org.checkerframework.languageserver.ServerMain \
+    --frameworkPath /path/to/checker-framework \
+    --checkers org.checkerframework.checker.nullness.NullnessChecker
 ```
 
 After this, red squiggle lines will be drawn under errors detected by the Nullness Checker. For other options, please refer to the documentation of the language server.
