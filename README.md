@@ -1,8 +1,8 @@
 # checker-framework-idea
 
-There has not been a dedicated Checker Framework plugin for IntelliJ IDEA yet, but since there is a plugin that provides LSP support for IDEA, [LSP Support](https://plugins.jetbrains.com/plugin/10209-lsp-support/), it is possible to integrate the [LSP Language Server](https://github.com/eisopux/checker-framework-languageserver) using this plugin.
+There is no dedicated Checker Framework plugin for IntelliJ IDEA (yet), but there is a plugin that provides LSP support for IDEA, [LSP Support](https://plugins.jetbrains.com/plugin/10209-lsp-support/), which makes it possible to integrate the [Checker Framework Language Server](https://github.com/eisopux/checker-framework-languageserver).
 
-After installing LSP Support and downloading the language server and Checker Framework to your disk, please go to Preferences - Languages & Frameworks - Language Server Protocol - Server Deﬁnitions, then choose “Raw command”, and add the extension `java`. A sample command that will run the Nullness Checker is:
+After installing LSP Support and downloading the [Checker Framework Language Server](https://github.com/eisopux/checker-framework-languageserver) and [Checker Framework](https://github.com/eisop/checker-framework) to your system, go to Preferences - Languages & Frameworks - Language Server Protocol - Server Deﬁnitions, then choose “Raw command”, and add the extension `java`. A sample command that will run the Nullness Checker is:
 
 ```
 java \
