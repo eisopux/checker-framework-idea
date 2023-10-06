@@ -9,6 +9,8 @@ class EcfLspServerSupportProvider : LspServerSupportProvider {
         file: VirtualFile,
         serverStarter: LspServerSupportProvider.LspServerStarter
     ) {
-        TODO("Not yet implemented")
+        if (file.extension == "java") {
+            serverStarter.ensureServerStarted(EcfLspServerDescriptor(project))
+        }
     }
 }
