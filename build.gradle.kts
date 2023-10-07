@@ -44,4 +44,22 @@ tasks {
     publishPlugin {
         token.set(System.getenv("PUBLISH_TOKEN"))
     }
+
+    register("getDownloaderRelease") {
+        doLast {
+            val process = ProcessBuilder("./scripts/get-downloader-release.sh")
+                .redirectOutput(ProcessBuilder.Redirect.INHERIT)
+                .redirectError(ProcessBuilder.Redirect.INHERIT)
+                .start()
+            process.waitFor()
+        }
+    }
+
+    named("assemble") {
+        dependsOn("getDownloaderRelease")
+    }
+}
+
+dependencies {
+    implementation(kotlin("script-runtime"))
 }
